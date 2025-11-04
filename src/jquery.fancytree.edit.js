@@ -34,7 +34,9 @@
 
 	var isMac = /Mac/.test(navigator.platform),
 		escapeHtml = $.ui.fancytree.escapeHtml,
-		trim = $.ui.fancytree.trim,
+		trim = function (s) {
+		    return s == null ? "" : String(s).trim();
+		},
 		unescapeHtml = $.ui.fancytree.unescapeHtml;
 
 	/**
